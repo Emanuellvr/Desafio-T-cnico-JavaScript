@@ -1,0 +1,26 @@
+#titulo{
+    text-decoration: none;
+    color: #000;
+}
+
+#container_photo{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.bottom-center{
+    position: absolute;
+    bottom: 8px;    
+    text-shadow: 0px 0px 3px #000;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.album{
+    background-color: #fff!important;
+}
+
+.text-right{
+    justify-content: right;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">  
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+
+    <div class="p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+        <div class="container">
+            <h1 class="my-0 mr-md-auto"><a id="titulo" href="/">Gallery</a></h1>    
+        </div>                            
+    </div>
+
+    <div class="container">
+        <div id="dtBasicExample_filter" class="mb-3 d-flex flex-row-reverse">
+            <label class="">
+                Search:
+                <input type="search" id="search_input" onkeyup="SearchFunction()" class="form-control form-control-sm" placeholder="" aria-controls="dtBasicExample">
+            </label>
+        </div>
+        <table id="myTable" class="table table-hover " cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th class="col-md-1">Album ID</th>
+                <th class="col-md-19">Album Title</th>
+                <th class="col-md-2"></th>
+              </tr>
+            </thead>
+
+            <tbody id="tbody">             
+            </tbody>
+          </table>
+
+    </div>
+
+    
+    
+	<script src="gallery.js"></script>
+  </body>
+</html>
