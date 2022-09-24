@@ -18,24 +18,38 @@
     </div>
 
     <div class="container">
-        <div id="dtBasicExample_filter" class="mb-3 d-flex flex-row-reverse">
-            <label class="">
-                Search:
-                <input type="search" id="search_input" onkeyup="SearchFunction()" class="form-control form-control-sm" placeholder="" aria-controls="dtBasicExample">
-            </label>
-        </div>
-        <table id="myTable" class="table table-hover " cellspacing="0" width="100%">
-            <thead>
-              <tr>
-                <th class="col-md-1">Album ID</th>
-                <th class="col-md-19">Album Title</th>
-                <th class="col-md-2"></th>
-              </tr>
-            </thead>
 
-            <tbody id="tbody">             
-            </tbody>
-          </table>
+      <div class="row mb-3">
+        <div class="d-flex col-sm-6 col-xs-12">
+          <h5 class="ms-2 align-self-end">Album</h5>
+        </div>
+
+        <div id="dtBasicExample_filter" class="d-flex col-sm-6 col-xs-12 flex-row-reverse">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Search</span>
+            </div>
+            <input id="search_input" type="text" class="form-control" onkeyup="SearchFunction()" placeholder="Album title">
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="container border">
+        <table id="myTable" class="table" cellspacing="0" width="100%">
+          <thead>
+            <tr>
+              <th class="col-md-1">Album ID</th>
+              <th class="col-md-19">Album Title</th>
+              <th class="col-md-2"></th>
+            </tr>
+          </thead>
+
+          <tbody id="tbody">             
+          </tbody>
+        </table>
+      </div>
+        
 
     </div>
 
