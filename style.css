@@ -24,3 +24,11 @@
 .text-right{
     justify-content: right;
 }
+
+#sort_button{
+    max-width: fit-content;
+}
+
+.input-group{
+    width: auto;
+}
