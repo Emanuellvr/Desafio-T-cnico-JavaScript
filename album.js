@@ -1,3 +1,6 @@
+/**
+ * Request all photos from an album and list in a grid
+ */
 $( document ).ready(
     function generateTable() {
 
@@ -8,11 +11,11 @@ $( document ).ready(
         fetch(url)
             .then(response => response.json())
             .then(album => {
-                                               
+                // get the json as an album and insert in html each photo from it
                 album.forEach(photo => {
-                    
+
                     const div1 = document.createElement("div");  
-                    div1.className = "col-md-3";                    
+                    div1.className = "col-sm-6 col-md-4 col-lg-3 photo";                                      
                     const div2 = document.createElement("div");  
                     div2.className = "card mb-3 box-shadow";
                     div2.id = "container_photo";
@@ -33,6 +36,9 @@ $( document ).ready(
     }
 );
 
+/**
+ * Sort list of photos by name, changing between asc and desc
+ */
 function sortListDir() {
     var list, i, switching, b, shouldSwitch, dir, switchcount = 0;
     list = document.getElementById("album");
@@ -43,7 +49,7 @@ function sortListDir() {
     while (switching) {
       // Start by saying: no switching is done:
         switching = false;
-        b = list.getElementsByClassName("col-md-3");
+        b = list.getElementsByClassName("photo");
         
         // Loop through all list-items:
         for (i = 0; i < (b.length - 1); i++) {
@@ -83,4 +89,15 @@ function sortListDir() {
             }
         }
     }
-  }
+        
+    // Add an arrow in the ordering direction
+    btn = document.getElementById("arrow");    
+    if (dir == "asc") {        
+        btn.className = "";
+        btn.classList.add("fa", "fa-arrow-down");        
+    }
+    else {                
+        btn.className = "";
+        btn.classList.add("fa", "fa-arrow-up");
+    }
+}
