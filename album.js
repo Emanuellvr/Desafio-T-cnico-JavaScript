@@ -12,7 +12,11 @@ $( document ).ready(
         url = `https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`;
         fetch(url)
             .then(response => response.json())
-            .then(album => {
+            .then(album => {   
+                //order gallery by title             
+                album.sort((a, b) => {
+                    return a.title.localeCompare(b.title);
+                });                
                 // get the json as an album and insert in html each photo from it
                 album.forEach(photo => {
 
