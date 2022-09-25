@@ -4,8 +4,10 @@
 $( document ).ready(
     function generateTable() {
 
-        albumId = window.location.search.substring(4)   
-        albumDiv = document.getElementById('album')
+        albumId = window.location.search.substring(4);0   
+        albumDiv = document.getElementById('album');
+        album_name = document.getElementById('album_name');
+        album_name.innerHTML = `Album ${albumId}`
 
         url = `https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`;
         fetch(url)
