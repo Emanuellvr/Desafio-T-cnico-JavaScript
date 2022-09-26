@@ -7,7 +7,7 @@ $( document ).ready(
         albumId = window.location.search.substring(4);0   
         albumDiv = document.getElementById('album');
         album_name = document.getElementById('album_name');
-        album_name.innerHTML = `Album ${albumId}`
+        album_name.innerHTML = `<strong>Album ${albumId}</strong>`
 
         url = `https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`;
         fetch(url)
@@ -98,12 +98,12 @@ function sortListDir() {
         
     // Add an arrow in the ordering direction
     btn = document.getElementById("arrow");    
-    if (dir == "asc") {        
-        btn.className = "";
-        btn.classList.add("fa", "fa-arrow-down");        
+    if (dir == "asc") {       
+        btn.className = ""; 
+        btn.classList.add("ps-2", "fa", "fa-caret-down");        
     }
     else {                
         btn.className = "";
-        btn.classList.add("fa", "fa-arrow-up");
+        btn.classList.add("ps-2", "fa", "fa-caret-up");
     }
 }
