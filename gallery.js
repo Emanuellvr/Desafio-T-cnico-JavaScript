@@ -1,7 +1,7 @@
 $( document ).ready(
     function generateTable() {
 
-        var table = document.getElementById("tbody");        
+        var table_body = document.getElementById("tbody");        
 
         url = 'https://jsonplaceholder.typicode.com/albums';
         fetch(url)
@@ -24,13 +24,23 @@ $( document ).ready(
                     column2.innerHTML = `<a type="button" href="album.html?id=${album.id}" class="btn btn-sm btn-outline-dark px-3 py-2 border-rounded" role="button">SEE PHOTOS</a>`;
                     column2.className = "button_column";
 
-                    table.appendChild(row);
+                    table_body.appendChild(row);
                     row.appendChild(column0);
                     row.appendChild(column1);
                     row.appendChild(column2);
                     //console.log(element)
                 });                
-            })    
+            }) 
+            .catch((error) => {
+              div = document.getElementById('table_box');  
+              var child = div.lastElementChild;       
+              div.removeChild(child);         
+              console.log(div);
+              const divError = document.createElement("div");  
+              divError.className = "col-sm-12 photo";
+              divError.innerHTML = 'There has been a problem with your data';
+              div.appendChild(divError);             
+            });
     }
 );
 

@@ -5,14 +5,14 @@ $( document ).ready(
     function generateTable() {
 
         albumId = window.location.search.substring(4);0   
-        albumDiv = document.getElementById('album');
+        albumDiv = document.getElementById('album');        
         album_name = document.getElementById('album_name');
         album_name.innerHTML = `<strong>Album ${albumId}</strong>`
 
         url = `https://jsonplaceholder.typicode.com/photos?albumId=${albumId}`;
         fetch(url)
             .then(response => response.json())
-            .then(album => {   
+            .then(album => {                  
                 //order gallery by title             
                 album.sort((a, b) => {
                     return a.title.localeCompare(b.title);
@@ -38,7 +38,13 @@ $( document ).ready(
                     div2.appendChild(title);
                                         
                 }); 
-            })    
+            })  
+            .catch((error) => {                              
+                const divError = document.createElement("div");  
+                divError.className = "col-sm-12 photo";
+                divError.innerHTML = 'There has been a problem with your data';
+                albumDiv.appendChild(divError);
+            });  
     }
 );
 
