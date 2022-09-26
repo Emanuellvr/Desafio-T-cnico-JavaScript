@@ -14,17 +14,20 @@ $( document ).ready(
                 
                 gallery.forEach(album => {
                     const row = document.createElement("tr");                
-                    const colum0 = document.createElement("td");
-                    colum0.innerHTML = album.id;
-                    const colum1 = document.createElement("td");
-                    colum1.innerHTML = album.title;
-                    const colum2 = document.createElement("td");
-                    colum2.innerHTML = `<a type="button" href="album.html?id=${album.id}" class="btn btn-sm btn-outline-dark" role="button">SEE PHOTOS</a>`;
+                    const column0 = document.createElement("td");
+                    column0.innerHTML = album.id;
+                    column0.className = "id_column";
+                    const column1 = document.createElement("td");
+                    column1.innerHTML = album.title;
+                    column1.className = "title_column";
+                    const column2 = document.createElement("td");
+                    column2.innerHTML = `<a type="button" href="album.html?id=${album.id}" class="btn btn-sm btn-outline-dark px-3 py-2 border-rounded" role="button">SEE PHOTOS</a>`;
+                    column2.className = "button_column";
 
                     table.appendChild(row);
-                    row.appendChild(colum0);
-                    row.appendChild(colum1);
-                    row.appendChild(colum2);
+                    row.appendChild(column0);
+                    row.appendChild(column1);
+                    row.appendChild(column2);
                     //console.log(element)
                 });                
             })    

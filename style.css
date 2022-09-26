@@ -1,6 +1,6 @@
 #titulo{
     text-decoration: none;
-    color: #000;
+    color: #696969;
 }
 
 #container_photo{
@@ -35,4 +35,52 @@
 
 .text-last-right{
     text-align-last: right;
+}
+
+.border-rounded{
+    border-radius: 30px;
+}
+
+.table{
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+.id_column{
+    border-top-width: 1px;
+    border-left-width: 1px;    
+    border-radius: 30px 0 0 30px;  
+    padding-left: 1em!important;  
+}
+
+.title_column{
+    border-top-width: 1px;    
+}
+
+.button_column{
+    border-top-width: 1px;    
+    border-right-width: 1px; 
+    border-radius: 0 30px 30px 0;
+}
+
+tr{
+    vertical-align: middle;
+}
+
+th, td, h5{
+    color: #696969;
+}
+
+#search_input{
+    border-radius: 30px;
+    padding-left: 20px;
+}
+
+#table_box{
+    border-radius: 10px;
+    padding: 0 30px;
+}
+
+.table-header{
+    border-bottom-width: 0!important;
 }
