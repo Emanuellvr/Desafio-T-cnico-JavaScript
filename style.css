@@ -14,6 +14,10 @@ th, td, h5, #sort_button{
     color: #696969;
 }
 
+.frame{
+    margin-bottom: 1.5em;
+}
+
 /* … */
 
 /* || List styles */
